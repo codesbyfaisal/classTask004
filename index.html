@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Theme Toggler</title>
+  <style>
+  	*{
+  	 padding: 0;
+       margin:0;
+       box-sizing: border-box;
+      }
+  	
+    .wrapper {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items:center;
+    }
+    .wrapper.dark {
+      color: white;
+      background-color: black;
+    }
+    
+    button{
+    	padding: 0.5rem 1.5rem;
+        font-size: 1rem;
+        background-color: black;
+        color: white;
+        border-radius: 1rem;
+        border: none;
+        outline: none;
+    }
+    
+    .wrapper.dark button {
+        background-color: white;
+        color: black;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper" class="wrapper">
+    <button type="button" id="toggle" onclick="toggler()">Dark</button>
+  </div>
+  <script>
+    function toggler() {
+      var wrapper = document.getElementById("wrapper");
+      var toggleBtn = document.getElementById("toggle");
+      wrapper.classList.toggle("dark");
+      if (wrapper.classList.contains("dark")) {
+        toggleBtn.textContent = "Light";
+      } else {
+        toggleBtn.textContent = "Dark";
+      }
+    }
+  </script>
+</body>
+</html>
