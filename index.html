@@ -17,25 +17,25 @@
       display: flex;
       justify-content: center;
       align-items:center;
-      background-color: black;
+      background-color: white;
     }
     .wrapper.dark {
-      background-color: white;
+      background-color: black;
     }
     
     button{
     	padding: 0.5rem 1.5rem;
         font-size: 1rem;
-        background-color: white;
-        color: black;
+        background-color: black;
+        color: white;
         border-radius: 1rem;
         border: none;
         outline: none;
     }
     
     .wrapper.dark button {
-        background-color: black;
-        color: white;
+        background-color: white;
+        color: black;
     }
   </style>
 </head>
@@ -43,6 +43,7 @@
   <div id="wrapper" class="wrapper">
     <button type="button" id="toggle" onclick="toggler()">Dark</button>
   </div>
+
   <script>
     function toggler() {
       var wrapper = document.getElementById("wrapper");
